@@ -3,6 +3,7 @@
 from pptx import Presentation
 from Fill_Out import *
 import itertools
+import os
 
 files = [powerpoint_name, file1, file2, file3]
 ext = [".pptx", ".txt"]
@@ -61,3 +62,5 @@ save_dir = r"C:\Users\Home\Desktop\powerpoint-generator\Presentations\\"
 save = prs.save(save_dir + file_names[0])
 if [save]:
 	print(file_names[0] + " was created!")
+
+os.system(save_dir[:-1] + file_names[0])
